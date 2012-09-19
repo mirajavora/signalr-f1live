@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>F1 Live</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        
+        @Styles.Render("~/Styles/base.css")
+        @RenderSection("Head", false)
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                
+                    <div class="container-fluid">
+                        <img src="/Content/Images/logo.png" />
+                    </div>
+                
+            </div>
+        </header>
+        <div>
+            @RenderSection("hero", false)
+            <div class="container-fluid">
+                @RenderBody()
+            </div>
+        </div>
+
+        @Scripts.Render("~/Scripts/base.js")
+        @RenderSection("Scripts", false)
+    </body>
+</html>

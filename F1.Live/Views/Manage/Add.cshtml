@@ -1,0 +1,18 @@
+﻿@model F1.Live.Models.AddFeedItemModel
+
+
+<div class="row-fluid">
+    <div class="span12">
+        <h2>Add new feed item</h2>
+
+        @{ Html.BeginForm("Add", "Manage", FormMethod.Post); }
+        <div class="control-group">
+            <label>Feed Content</label>
+            @Html.TextAreaFor(x => x.Content)
+        </div>   
+        <div class="form-actions">
+            <input type="submit" class="btn btn-success" text="Add Feed Item" />
+        </div>
+        @{ Html.EndForm(); }
+    </div>
+</div>

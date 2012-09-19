@@ -1,0 +1,26 @@
+﻿@model F1.Live.Models.ManageModel
+
+@section Scripts {
+
+
+}
+
+<div class="row-fluid">
+    <div class="span12 form-actions">
+        @Html.ActionLink("Add new item", "Add", "Manage", new {}, new { @class ="btn btn-primary"})
+    </div>
+</div>
+
+<div class="row-fluid">
+    <div class="span12">
+        <table class="table table-striped">
+            @foreach(var item in Model.Items)
+            {
+                <tr class="@(item.IsPublished ? "success" : "")">
+                    <td>@item.Message</td>
+                    <td>@Html.ActionLink("Publish", "Publish", "Manage", new { feedItemId = @item.Id}, new{ @class = "btn btn-success"})</td>
+                </tr>   
+            }
+        </table>
+    </div>
+</div>

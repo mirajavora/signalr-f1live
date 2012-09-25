@@ -17,6 +17,7 @@ namespace F1.Live.Core.Config
 
         public override object GetService(System.Type serviceType)
         {
+            //lazy man's DI -> only register and resolve the hubs, the rest use the default resolver
             if(serviceType.CanBeCastTo<Hub>())
                 return _kernel.Resolve(serviceType);
 

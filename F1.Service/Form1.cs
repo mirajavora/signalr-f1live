@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
 using SignalR.Client.Hubs;
@@ -27,6 +22,7 @@ namespace F1.Service
             Init();
         }
 
+        //please ignore the quality of the code ...
         private void Init()
         {
             AddItem("Service started", "OK");
@@ -176,7 +172,8 @@ namespace F1.Service
             }
             catch (Exception ex)
             {
-                //load the fake phoots
+                //load the fake photos
+                //todo
                 photos.Add("http://google.com/image.jpg");
             }
             return photos;

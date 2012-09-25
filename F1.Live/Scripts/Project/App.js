@@ -4,6 +4,8 @@ function App() {
 
         Chat();
         Feed();
+        Photos();
+        Leaderboard();
 
         $.connection.hub.logging = true;
         $.connection.hub.start()

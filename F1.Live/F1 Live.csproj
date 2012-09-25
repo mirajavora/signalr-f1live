@@ -176,6 +176,8 @@
     <Compile Include="Core\Extensions\LinqExtensions.cs" />
     <Compile Include="Core\Hubs\ChatHub.cs" />
     <Compile Include="Core\Hubs\FeedHub.cs" />
+    <Compile Include="Core\Hubs\ImagesHub.cs" />
+    <Compile Include="Core\Hubs\LeaderboardHub.cs" />
     <Compile Include="Core\Install\CustomControllerFactory.cs" />
     <Compile Include="Core\Install\HubsInstaller.cs" />
     <Compile Include="Core\Install\PersistenceInstaller.cs" />
@@ -199,6 +201,8 @@
     </Content>
     <Content Include="Scripts\Project\Chat.js" />
     <Content Include="Scripts\Project\Feed.js" />
+    <Content Include="Scripts\Project\Leaderboard.js" />
+    <Content Include="Scripts\Project\Photos.js" />
     <Content Include="Styles\bootstrap-responsive.min.css" />
     <Content Include="Styles\bootstrap.min.css" />
     <Content Include="Styles\skin.css" />

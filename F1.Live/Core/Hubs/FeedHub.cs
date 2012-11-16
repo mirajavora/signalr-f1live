@@ -2,7 +2,7 @@
 using F1.Live.Core.Domain;
 using F1.Live.Core.Extensions;
 using F1.Live.Core.Services;
-using SignalR.Hubs;
+using Microsoft.AspNet.SignalR.Hubs;
 
 namespace F1.Live.Core.Hubs
 {
@@ -19,7 +19,7 @@ namespace F1.Live.Core.Hubs
         {
             //normally you wouldn't send down domain objects & you would send down the whole batch as list
             _repository.Query<FeedItem>().Where(x => x.IsPublished).OrderByDescending(x => x.Created).Take(2).Each(
-                x => Clients[Context.ConnectionId].receive(x));
+                x => Clients.Caller.receive(x));
         }
     }
 }

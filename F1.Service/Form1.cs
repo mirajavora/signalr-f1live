@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Windows.Forms;
-using SignalR.Client.Hubs;
+using Microsoft.AspNet.SignalR.Client.Hubs;
 
 namespace F1.Service
 {
@@ -31,8 +31,8 @@ namespace F1.Service
 
             //create proxy
             _connection = new HubConnection(EndPointUrl.Text);
-            _leaderboardHub = _connection.CreateProxy("LeaderboardHub");
-            _imageHub = _connection.CreateProxy("ImagesHub");
+            _leaderboardHub = _connection.CreateHubProxy("LeaderboardHub");
+            _imageHub = _connection.CreateHubProxy("ImagesHub");
             _connection.Start();
             
             AddItem("Connection State", _connection.State.ToString());

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using SignalR.Hubs;
+using Microsoft.AspNet.SignalR.Hubs;
 
 namespace F1.Live.Core.Hubs
 {
@@ -7,7 +7,7 @@ namespace F1.Live.Core.Hubs
     {
         public void PublishLeaderboard(IList<object> leaderboard)
         {
-            Clients.receive(leaderboard);
+            Clients.All.receive(leaderboard);
         }
     }
 }

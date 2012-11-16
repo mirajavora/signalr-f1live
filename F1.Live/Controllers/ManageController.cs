@@ -3,7 +3,7 @@ using F1.Live.Core.Domain;
 using F1.Live.Core.Hubs;
 using F1.Live.Core.Services;
 using F1.Live.Models;
-using SignalR;
+using Microsoft.AspNet.SignalR;
 
 namespace F1.Live.Controllers
 {
@@ -53,7 +53,7 @@ namespace F1.Live.Controllers
             item.IsPublished = true;
             _repository.Save(item);
 
-            var result = myHub.Clients.receive(item);
+            var result = myHub.Clients.All.receive(item);
             return RedirectToAction("Index");
         }
     }

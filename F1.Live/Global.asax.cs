@@ -5,7 +5,7 @@ using Castle.Windsor;
 using F1.Live.App_Start;
 using F1.Live.Core.Config;
 using F1.Live.Core.Install;
-using SignalR;
+using Microsoft.AspNet.SignalR;
 
 namespace F1.Live
 {

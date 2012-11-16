@@ -1,4 +1,4 @@
-﻿using SignalR.Hubs;
+﻿using Microsoft.AspNet.SignalR.Hubs;
 
 namespace F1.Live.Core.Hubs
 {
@@ -6,7 +6,7 @@ namespace F1.Live.Core.Hubs
     {
         public void PublishPhoto(string url)
         {
-            Clients.receive(url);
+            Clients.All.receive(url);
         }
     }
 }

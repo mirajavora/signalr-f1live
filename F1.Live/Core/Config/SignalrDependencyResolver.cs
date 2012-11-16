@@ -1,7 +1,7 @@
 ﻿using Castle.MicroKernel;
 using F1.Live.Core.Extensions;
-using SignalR;
-using SignalR.Hubs;
+using Microsoft.AspNet.SignalR;
+using Microsoft.AspNet.SignalR.Hubs;
 
 namespace F1.Live.Core.Config
 {

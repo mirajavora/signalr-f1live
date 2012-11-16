@@ -4,7 +4,7 @@ function Leaderboard() {
     var init = function() {
         leaderboardHub = $.connection.leaderboardHub;
 
-        leaderboardHub.receive = function (value) {
+        leaderboardHub.client.receive = function (value) {
             console.log('received Leaderboard (' + value + ')');
             $(".leaderboard").html($(".leaderboard-template").render({ Items: value }));
         };

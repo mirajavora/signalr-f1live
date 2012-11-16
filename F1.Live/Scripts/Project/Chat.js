@@ -3,11 +3,11 @@ function Chat() {
     
     var init = function () {
         $(".chat-submit").on("click", sendMessage);
-        $(document).on("Connected", function () { chatHub.init(); });
+        $(document).on("Connected", function () { chatHub.server.init(); });
 
         chatHub = $.connection.chatHub;
 
-        chatHub.receiveChat = function (value) {
+        chatHub.client.receiveChat = function (value) {
             console.log('Server called addMessage(' + value + ')');
             $("ul.chat-list").prepend($(".chat-template").render(value));
             $("ul.chat-list li:gt(2)").remove();
@@ -15,7 +15,7 @@ function Chat() {
     };
 
     var sendMessage = function() {
-        chatHub.send($(".chat-message").val());
+        chatHub.server.send($(".chat-message").val());
     };
 
     init();
